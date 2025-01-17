@@ -70,8 +70,8 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-col items-center justify-center border border-gray-200 rounded-lg h-full w-full bg-slate-50 relative">
-    <div class="flex items-center justify-center mb-3 flex-wrap">
-      <h1 class="text-2xl md:text-5xl font-bold text-gray-800 title text-center font-mono mr-2">Robert (Jason) Roberts</h1>
+    <div class="flex items-center justify-center mb-3 flex-wrap-reverse">
+      <h1 class="text-2xl md:text-5xl font-bold text-gray-800 title text-center font-mono mr-2 mt-4 md:mt-0">Robert (Jason) Roberts</h1>
       <div class="flex items-center justify-center">
           <a
           :href="linkedInUrl"
@@ -136,6 +136,13 @@ onMounted(() => {
   z-index: 1;
   font-family: 'Fira Code', monospace;
   opacity: 0;
+}
+
+/* Hide sparkle on mobile devices */
+@media (max-width: 768px) {
+  .sparkle {
+    display: none;
+  }
 }
 
 .linkedin-btn {
