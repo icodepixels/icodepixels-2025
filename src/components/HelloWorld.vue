@@ -90,7 +90,7 @@ onMounted(() => {
             </svg>
         </a>
         <a
-          href="https://github.com/rjasonroberts"
+          href="https://github.com/icodepixels"
           target="_blank"
           rel="noopener noreferrer"
           class="github-btn bg-slate-50 hover:bg-gray-200 p-3 rounded-lg transition-colors duration-300"
