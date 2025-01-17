@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
-import GitHubActivity from './GitHubActivity.vue'
 
 // Add reactive state for sparkle position, color and number
 const sparkleX = ref(0)
@@ -72,7 +71,7 @@ onMounted(() => {
 <template>
   <div class="flex flex-col items-center justify-center border border-gray-200 rounded-lg h-full w-full bg-slate-50 relative">
     <div class="flex items-center justify-center mb-3 flex-wrap">
-      <h1 class="text-2xl md:text-5xl font-bold text-gray-800 title text-center font-mono">Robert (Jason) Roberts</h1>
+      <h1 class="text-2xl md:text-5xl font-bold text-gray-800 title text-center font-mono mr-2">Robert (Jason) Roberts</h1>
       <div class="flex items-center justify-center">
           <a
           :href="linkedInUrl"
@@ -90,14 +89,19 @@ onMounted(() => {
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
         </a>
+        <a
+          href="https://github.com/rjasonroberts"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-btn bg-slate-50 hover:bg-gray-200 p-3 rounded-lg transition-colors duration-300"
+        >
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="w-6 h-6">
+        </a>
       </div>
     </div>
     <p class="text-sm md:text-base sm:p-2 lg:p-0 text-gray-600 text-center my-6 max-w-[600px]">
       Senior Software Engineer passionate about building elegant frontend experiences and integrating cutting-edge AI solutions.
     </p>
-
-    <!-- Add GitHub Activity component -->
-    <GitHubActivity class="mt-4 border border-gray-200 rounded-lg p-4" />
 
     <div
       class="sparkle absolute"
